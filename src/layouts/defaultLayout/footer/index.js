@@ -4,7 +4,7 @@ import {FooterBox} from "./styles";
 const Footer = () => {
         return (
             <FooterBox>
-                <a href="https://reqres.in" target="_blank" rel="noopener noreferrer">API Doc</a>
+                <a href="https://reqres.in" target="_blank" rel="noopener noreferrer">Reference: API Doc</a>
                 <span> - </span>
                 <a href="https://reqres.in" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"/> Source Code</a>
             </FooterBox>
