@@ -38,7 +38,9 @@ const rootReducer = (state, action) => {
 const store = createStore(
   rootReducer,
   composeWithDevTools(
-    applyMiddleware(sagaMiddleware, logger, routerMiddleware(history))
+    applyMiddleware(sagaMiddleware, 
+      // logger, 
+      routerMiddleware(history))
   )
 );
 sagaMiddleware.run(rootSaga);
