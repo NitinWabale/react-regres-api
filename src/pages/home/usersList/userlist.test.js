@@ -48,8 +48,8 @@ describe('<UsersList />', () => {
       });
     test('should render users with mock data', () => {
         const wrapper = shallow(<UsersList  loading={false} data={mockData} />)
-        expect(wrapper.find('.lastname').length).toEqual(mockData.length)
-        expect(wrapper.find('.firstname').get(1).props.children).toEqual(mockData[1].first_name)
-        expect(wrapper.find('.lastname').get(0).props.children).toEqual(mockData[0].last_name)
+        expect(wrapper.find('.id').length).toEqual(mockData.length)
+        expect(wrapper.find('.firstname').get(1).props.children).toEqual(`${mockData[1].first_name}  ${mockData[1].last_name}`)
+        expect(wrapper.find('.id').get(0).props.children).toEqual(mockData[0].id)
     });
 });

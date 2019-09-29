@@ -1,15 +1,15 @@
-import { applyMiddleware, createStore, combineReducers } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { routerReducer, routerMiddleware } from "react-router-redux";
-import createSagaMiddleware from "redux-saga";
-import { createLogger } from "redux-logger";
-import UsersList from "./pages/home/usersList";
-import Login from "./pages/login";
-import Signup from "./pages/signup";
-import Edit from "./pages/edit";
-import Add from "./pages/add";
-import { all } from "redux-saga/effects";
-import history from "./utils/helpers/history";
+import { applyMiddleware, createStore, combineReducers } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
+import createSagaMiddleware from 'redux-saga';
+import { createLogger } from 'redux-logger';
+import UsersList from './pages/home/usersList';
+import Login from './pages/login';
+import Signup from './pages/signup';
+import Edit from './pages/edit';
+import Add from './pages/add';
+import { all } from 'redux-saga/effects';
+import history from './utils/helpers/history';
 
 const rootSaga = function*() {
   yield all([
@@ -17,13 +17,13 @@ const rootSaga = function*() {
     ...Login.sagas,
     ...Signup.sagas,
     ...Edit.sagas,
-    ...Add.sagas
+    ...Add.sagas,
   ]);
 };
 const sagaMiddleware = createSagaMiddleware();
 const logger = createLogger();
 const rootReducer = (state, action) => {
-  if (action.type === "USER_LOGOUT") {
+  if (action.type === 'USER_LOGOUT') {
     state = undefined;
   }
   return combineReducers({
@@ -32,16 +32,13 @@ const rootReducer = (state, action) => {
     login: Login.reducers,
     signup: Signup.reducers,
     edit: Edit.reducers,
-    add: Add.reducers
+    add: Add.reducers,
   })(state, action);
 };
 const store = createStore(
   rootReducer,
   composeWithDevTools(
-    applyMiddleware(sagaMiddleware,
-        logger,
-        routerMiddleware(history)
-    )
+    applyMiddleware(sagaMiddleware, logger, routerMiddleware(history))
   )
 );
 sagaMiddleware.run(rootSaga);

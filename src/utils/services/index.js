@@ -1,7 +1,7 @@
-import axios from "axios";
-import * as config from "../../config";
-import { store } from "../../store";
-import { push } from "react-router-redux";
+import axios from 'axios';
+import * as config from '../../config';
+import { store } from '../../store';
+import { push } from 'react-router-redux';
 
 axios.defaults.baseURL = config.API_BASE_URL;
 export const makeGetReq = url =>
@@ -34,7 +34,7 @@ export const makePatchReq = params =>
     });
 const action = type => store.dispatch({ type });
 export const logOut = () => {
-  localStorage.removeItem("authToken");
-  action("USER_LOGOUT");
-  store.dispatch(push("/login"));
+  localStorage.removeItem('authToken');
+  action('USER_LOGOUT');
+  store.dispatch(push('/login'));
 };

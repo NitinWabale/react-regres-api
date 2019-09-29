@@ -1,13 +1,13 @@
-import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/home/home";
-import Login from "./pages/login/login";
-import Signup from "./pages/signup/signup";
-import Edit from "./pages/edit/edit";
-import Add from "./pages/add/add";
-import NotFound from "./pages/notFound";
-import { PrivateRoute } from "./components/privateRoute";
-import history from "./utils/helpers/history";
+import React from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/home/home';
+import Login from './pages/login/login';
+import Signup from './pages/signup/signup';
+import Edit from './pages/edit/edit';
+import Add from './pages/add/add';
+import NotFound from './pages/notFound';
+import { PrivateRoute } from './components/privateRoute';
+import history from './utils/helpers/history';
 
 const RouterComponent = () => {
   return (

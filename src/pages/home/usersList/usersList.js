@@ -43,8 +43,8 @@ export class UsersList extends Component {
           </Avatar>
           <UserInfo>
           <UserInfo>
-            <Text color={"firstname"} className='firstname'>{item.first_name}</Text>
-            <Text color={"lastname"}  className='lastname'>{item.last_name}</Text>
+            <Text color={"firstname"} className='firstname'>{`${item.first_name}  ${item.last_name}`}</Text>
+            <Text color={"id"}  className='id'>{item.id}</Text>
           </UserInfo>
           </UserInfo>
           <button
@@ -65,11 +65,14 @@ export class UsersList extends Component {
     return (
       <>
         { !loading && (
+          <>
+          <h2>User Accounts</h2>
           <AddUser>
             <NavLink exact to="/add" className="btn add">
-              Add User
+              Create New
             </NavLink>
           </AddUser>
+          </>
         )}
         {this.renderForm(data)}
         <UserLoading isLoading={loading} />

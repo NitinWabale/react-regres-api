@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router";
-import RouterComponent from "./router";
-import GlobalStyle from "./theme/injectGlobal";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import RouterComponent from './router';
+import GlobalStyle from './theme/injectGlobal';
 
 class App extends Component {
   render() {
