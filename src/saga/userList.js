@@ -1,8 +1,8 @@
 import { put, takeEvery,call } from "redux-saga/effects";
-import * as actions from "./actions";
-import * as constants from "./constants";
-import * as service from "../../../utils/services";
-import {store} from "../../../store";
+import * as actions from "../actions/userList";
+import * as constants from "../pages/home/usersList/constants";
+import * as service from "../utils/services";
+import {store} from "../store";
 
 function* getData(action) {
     const { query } = action.payload;

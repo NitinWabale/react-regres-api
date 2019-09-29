@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import * as actions from "./actions";
+import * as actions from "../../actions/login";
 import { connect } from "react-redux";
 import PublicHead from "../../components/publicHead";
 import DefaultLayout from "../../layouts/defaultLayout";

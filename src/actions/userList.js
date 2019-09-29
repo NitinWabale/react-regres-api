@@ -1,4 +1,4 @@
-import * as constants from "./constants";
+import * as constants from "../pages/home/usersList/constants";
 
 export const get = ( query ) => ({
     type: constants.GET,

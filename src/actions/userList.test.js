@@ -1,6 +1,6 @@
 import React from "react";
-import * as actions from "./actions";
-import * as constants from "./constants";
+import * as actions from "./userList";
+import * as constants from "../pages/home/usersList/constants";
 
 describe('UserList actions', () => {
     test('should create an action to get query', () => {

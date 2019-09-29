@@ -1,6 +1,5 @@
 import React from "react";
 import * as service from "../../../utils/services";
-import {NavLink} from "react-router-dom";
 import {HeaderBox,HeaderContainer} from "./styles";
 import PropTypes from "prop-types";
 

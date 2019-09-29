@@ -1,6 +1,6 @@
 import React from "react";
-import  reducers  from "./reducers";
-import * as constants from "./constants";
+import  reducers  from "./userList";
+import * as constants from "../pages/home/usersList/constants";
 
 const initial ={
     data:[],

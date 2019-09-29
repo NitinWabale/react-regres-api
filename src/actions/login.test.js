@@ -1,6 +1,6 @@
 import React from "react";
-import * as actions from "./actions";
-import * as constants from "./constants";
+import * as actions from "./login";
+import * as constants from "../pages/login/constants";
 
 describe('login actions', () => {
     test('should create an action to attempt login', () => {

@@ -1,4 +1,4 @@
-import * as constants from "./constants";
+import * as constants from "../pages/login/constants";
 const initial ={
     failure:false,
     loading:false,

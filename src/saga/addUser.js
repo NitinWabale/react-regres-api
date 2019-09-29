@@ -1,7 +1,7 @@
 import { put, takeEvery,call } from "redux-saga/effects";
 import * as constants from "../pages/add/constants";
 import * as actions from "../actions/addUser";
-import * as userListActions from "../pages/home/usersList/actions";
+import * as userListActions from "../actions/userList";
 import * as service from "../utils/services";
 import {store} from "../store";
 import {push} from "react-router-redux";

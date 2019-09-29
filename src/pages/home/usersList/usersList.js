@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import UserLoading from "../../../components/userLoading";
-import * as actions from "./actions";
+import * as actions from "../../../actions/userList";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";

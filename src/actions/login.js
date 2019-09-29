@@ -1,4 +1,4 @@
-import * as constants from "./constants";
+import * as constants from "../pages/login/constants";
 
 export const attempt = (email,password) => ({
     type: constants.ATTEMPT,

@@ -39,7 +39,7 @@ const store = createStore(
   rootReducer,
   composeWithDevTools(
     applyMiddleware(sagaMiddleware,
-        //logger,
+        logger,
         routerMiddleware(history)
     )
   )

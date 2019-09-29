@@ -1,8 +1,8 @@
 import { put, takeEvery,call } from "redux-saga/effects";
-import * as constants from "./constants";
-import * as actions from "./actions";
-import * as service from "../../utils/services";
-import {store} from "../../store";
+import * as constants from "../pages/login/constants";
+import * as actions from "../actions/login";
+import * as service from "../utils/services";
+import {store} from "../store";
 import {push} from "react-router-redux";
 
 export function* loginAttempt(action) {

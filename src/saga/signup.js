@@ -9,7 +9,7 @@ function* signupAttempt(action) {
     const {params } = action.payload;
     try {
         yield put(actions.loading( true));
-        const response = yield call(service.makePostReq,{url:'/login',data:params});
+        yield call(service.makePostReq,{url:'/login',data:params});
         alert('You have successfully registered, Now you can log in.');
         store.dispatch(push("/login"));
     } catch (error) {
