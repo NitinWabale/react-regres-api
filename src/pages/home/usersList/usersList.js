@@ -76,7 +76,7 @@ export class UsersList extends Component {
         )}
         {this.renderForm(data)}
         <UserLoading isLoading={loading} />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", margin: "20px" }}>
           {total_pages >= next_page && !loading && (
             <button className="btn load_more" onClick={this.handleLoadMore}>
               Load more...

@@ -11,7 +11,7 @@ const initial ={
     next_page:1,
     total_pages:1
 }
-describe('login reducers', () => {
+describe('userList reducers', () => {
     test('should return the initial state', () => {
         expect(reducers(undefined, {}))
             .toEqual(initial)
